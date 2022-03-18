@@ -4,34 +4,37 @@ namespace Day5FunctionalProblem
 {
     internal class Program
     {
-        public static void FlipCoin()
+        public static void VowelOrConsonant()
         {
-            Console.WriteLine("Hello, Welcome to Coin Flip Program");
-            int heads = 0;
-            int tails = 0;
-
-            Console.WriteLine("Enter the Coin flipping operation range: ");
-            int count = int.Parse(Console.ReadLine());
-            while (count > 0)
+            Console.WriteLine("Enter a Alphabet");
+            char ch = Convert.ToChar(Console.ReadLine().ToLower());
+            switch (ch)
             {
-                Random rand = new Random();
-                int randomCheck = rand.Next(2);
-                if (randomCheck == 0)
-                {
-                    heads++;
-                }
-                else
-                {
-                    tails++;
-                }
-                count--;
+                case 'a':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'i':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'o':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'u':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'e':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                default:
+                    Console.WriteLine("The Alphabet is a Consonant");
+                    break;
             }
-            Console.WriteLine("Number of heads is: " + heads);
-            Console.WriteLine("Number of Tails is: " + tails);
+
         }
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
-            Program.FlipCoin();
+            Program.VowelOrConsonant();
         }
     }
 }
