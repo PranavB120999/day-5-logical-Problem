@@ -4,34 +4,21 @@ namespace Day5FunctionalProblem
 {
     internal class Program
     {
-        public static void FlipCoin()
+        public static void Factor()
         {
-            Console.WriteLine("Hello, Welcome to Coin Flip Program");
-            int heads = 0;
-            int tails = 0;
-
-            Console.WriteLine("Enter the Coin flipping operation range: ");
-            int count = int.Parse(Console.ReadLine());
-            while (count > 0)
+            int fact = 1;
+            Console.WriteLine("Enter a number to check: ");
+            int num = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= num; i++)
             {
-                Random rand = new Random();
-                int randomCheck = rand.Next(2);
-                if (randomCheck == 0)
-                {
-                    heads++;
-                }
-                else
-                {
-                    tails++;
-                }
-                count--;
+                fact = fact * i;
             }
-            Console.WriteLine("Number of heads is: " + heads);
-            Console.WriteLine("Number of Tails is: " + tails);
+            Console.WriteLine("The factorial of " + num + " is: " + fact);
         }
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
-            Program.FlipCoin();
+            Program.Factor();
         }
     }
 }
